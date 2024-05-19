@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+header{
+    background-color: #1a1818;
+
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 10px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: #624c9c;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition :all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.location {
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the location */
+}
+
+.location h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+/* Style the embedded Google Maps iframe */
+.location iframe {
+    width: 100%; /* Make the map fill the container */
+    max-width: 800px; /* Limit the maximum width of the map */
+    height: 450px; /* Set the height of the map */
+    border: none; /* Remove border */
+}
+
+
+
+.logo {
+    padding-right: 20px; /* Add padding to the right of the logo */
+}
+
+.logo img {
+    height: 50px;
+    border: 1px solid #ccc; /* Add border around logo */
+    padding: 10px 15px;
+    border-radius: 3px; /* Add padding around logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+    border: 1px solid #ccc; /* Add border around links */
+    padding: 5px 15px;
+    border-radius: 3px; /* Add padding around links */
+}
+
+.nav-links a:hover {
+    color: #ff7f50;
+}
+
+.contact-form {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="tel"],
+.contact-form input[type="email"],
+.contact-form input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.about-contact-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.about-us, .contact-us, .follow-us {
+    width: 30%;
+    padding: 20px;
+    border: 2px solid #007bff;
+}
+
+.about-us h3, .contact-us h3, .follow-us h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.about-us p, .contact-us p, .follow-us .social-links a {
+    color: #442727;
+}
+
+.contact-us, .follow-us {
+    margin-left: 20px;
+}
+
+/* Styling for the social links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* Add border to bottom of navbar */
+}
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        /* left: -100%; */
+
+        top: -100%;
+        gap : 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1818;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        top : 70px;
+        left: 0;
+    }
+}
